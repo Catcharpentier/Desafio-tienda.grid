@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar main main main"
+    "footer footer footer footer";
+    font-family:Arial, Helvetica, sans-serif ;
+    grid-template-rows: 160px 1fr 100px;
+    min-height: 100vh;
+    grid-template-columns: 200px ;
+    
+}
+.logo{
+    width: 80px;
+    height: auto;
+    
+}
+
+.header{
+    grid-area: header;
+    background-image: url(../images/panoramenu.jpeg) ;
+    background-size:contain;
+    height: 160px;
+    font-weight: bolder;
+    font-size: larger;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding-right: 30px;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap:15px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-item{
+    color:white
+    
+}
+.sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: rgb(173, 185, 181);
+    cursor: pointer;
+    padding: 30px;
+
+}
+.sidebar-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    }
+    .sidebar-item{
+        font-weight: bold;
+    }
+
+.main{
+grid-area: main;
+background-color: white;
+padding: 20px;
+display:grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+gap: 20px
+
+}
+
+.cart-btn{
+cursor: pointer;
+background-color: transparent;
+color: white;
+border-radius: 5px;
+padding : 05px;
+font-size: 25px;
+}
+
+
+.card{
+    display: flex;
+    flex-flow:column nowrap;
+    gap:20px;
+    width: 300px;
+    border-radius: 05px;
+    border-style: solid;
+}
+.card-container{
+    display: flex;
+    flex-flow:column nowrap;
+    align-items: center;;
+    
+    gap:20px;
+    padding: 20px;
+}
+.card-img{
+    width: 100%;
+    display: flex;;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.card-btn{
+    cursor: pointer;
+    background-color: rgb(107, 133, 121);
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+.footer{
+    grid-area: footer;
+    background-color:  rgb(173, 185, 181);
+    padding:20px
+    }
+.footer-text{
+    font-style: italic;
+    text-align: center;
+    
+
+}
+.footer-social{
+list-style: none;
+display: flex;
+justify-content: center;
+align-items: center;
+gap:30px;
+font-size: 26px;
+padding: 15px;
+}
+.footer-social-item a {
+    cursor: pointer;
+    text-decoration: none;
+    color:white;  
+    padding: 10px;  
+    font-size: 35px; 
+}
